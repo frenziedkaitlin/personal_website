@@ -1,0 +1,86 @@
+body{
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 62.5%;
+    margin: -1em -1em -1em -1em;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 900px) {
+    body{font-size: 46.875%;}
+}
+
+@media screen and (max-width: 550px) {
+    body{font-size: 31.25%;}
+}
+
+.block{
+    margin: -1em auto -4em auto;
+    height: 100%;   
+    padding: 2em 2em 2em 2em;
+    font-size: 7em;
+    text-align: center;
+}
+
+#home{
+    margin: 0 auto -4em auto;
+    background-color: #D93434;
+}
+ 
+a{
+    color:white;
+}
+
+p{
+    display: inline;
+}
+
+.menu{
+    background-color: rgba(0,0,0,0.5);
+    font-size: 3em;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    margin: 0 -1em 0 -1em;
+    padding: 0.4em 1em 0.25em 1em;
+}
+
+#topmenu img{
+    padding: 0.2em 0 0.2em 0;
+}
+
+.menu a{
+    text-decoration: none;
+}
+
+#hl{
+    position: fixed;
+    left: 0.5em;
+}
+
+#external{
+    position: fixed;
+    right: 0.5rem;
+}
+
+#now{
+    background-color: #36429C;
+}
+
+#featured{
+    background-color: #736B6B;
+}
+
+#contact{
+    padding: 0;
+    background-color: #D93434;
+}
+
+#contact a{
+    text-decoration: none;
+}
+
+#social{
+    display: block;
+}
+
