@@ -24,11 +24,11 @@ var csv_as_object = function(data_as_csv){
 			text = text[1];
 
 			if(type == "navigation menu"){
-				obj[type = text;
+				obj[type] = text;
 			} else if(type == "section"){
-				if(!obj[type) obj[type = [];
+				if(!obj[type]) obj[type = [];
 
-				obj[type.push(text);
+				obj[type].push(text);
 			} else {}
 		}
 	}
