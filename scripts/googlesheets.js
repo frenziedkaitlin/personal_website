@@ -13,7 +13,7 @@ $(function() {
 var csv_as_object = function(data_as_csv){
 	var obj = {};
 	var rows = data_as_csv.split("\n");
-	for (r in rows){
+	for (var r = 1; r < rows.length; r++){
 		var columns = rows[r].split(",");
 		var identifier = columns[0];
 		obj[identifier] = [];
