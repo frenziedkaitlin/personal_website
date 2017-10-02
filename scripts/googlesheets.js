@@ -18,6 +18,8 @@ var csv_as_object = function(data_as_csv){
 
 		if(rows[r].split(",").length > 2){
 			var text = rows[r].split(",", 2)[1];
+			console.log(type);
+			console.log(text);
 
 			if(type == "navigation menu"){
 				obj[type] = text;
