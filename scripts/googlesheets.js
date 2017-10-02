@@ -5,7 +5,7 @@ $(function() {
 	url = url.replace('PUB_ID', id);
 	$.get(url)
 	.then(csv_as_object)
-	.then(data => {
+	.then(function(data) {
 		console.log(data);
 	});
 });
