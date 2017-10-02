@@ -15,22 +15,19 @@ var csv_as_object = function(data_as_csv){
 	var rows = data_as_csv.split("\n");
 
 	for (var r = 1; r < rows.length; r++){
-
-		var type = rows[r].split(",", 1);
-		console.log(type);
-
+		var type = rows[r].split(",", 1)[0];
 
 		if(rows[r].split(",").length > 2){
 			var text = rows[r].split(",", 2)[1];
-			console.log(type[0]);
+			console.log(type);
 			console.log(text);
 
 			if(type[0] == "navigation menu"){
-				obj[type[0]] = text;
-			} else if(type[0] == "section"){
-				if(!obj[type[0]]) obj[type[0]] = [];
+				obj[type = text;
+			} else if(type == "section"){
+				if(!obj[type) obj[type = [];
 
-				obj[type[0]].push(text);
+				obj[type.push(text);
 			} else {}
 		}
 	}
