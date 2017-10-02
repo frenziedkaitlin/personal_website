@@ -9,9 +9,6 @@ $(function() {
 	})
 	.then(data => {
 		console.log(data);
-		for(d in data){
-			console.log(data[d]);
-		}
 	});
 });
 
