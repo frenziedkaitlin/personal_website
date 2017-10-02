@@ -11,19 +11,22 @@ $(function() {
 });
 
 var csv_as_object = function(data_as_csv){
-	console.log(data_as_csv);
 	var obj = {};
 	var rows = data_as_csv.split("\n");
 	for (var r = 1; r < rows.length; r++){
-		var columns = rows[r].split(",");
-		var identifier = columns[0];
-		obj[identifier] = [];
-		if(columns.length > 1){
-			for(var i = 1; i < columns.length; i++){
-				obj[identifier].push(columns[i]);
-			}
+		var type = rows[r].split(",", 1)[0];
+
+		if(rows[r].split(",").length > 2){
+			var text = rows[r].split(",", 2)[1];
+
+			if(type == "navigation menu"){
+				obj[type] = text;
+			} else if(type == "section"){
+				if(!obj[type]) obj[type] = [];
+
+				obj[type].push(text);
+			} else {}
 		}
 	}
-	console.log("returning1");
 	return obj;
 }
