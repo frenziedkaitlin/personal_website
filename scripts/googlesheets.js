@@ -3,10 +3,9 @@ var id = '2PACX-1vSNtn3oG0TMMy4Manxu-y6tMzoDGp2JlNBTIzNmjnoadrl_VjaFlr_fw2DifD88
 
 $(function() {
 	url = url.replace('PUB_ID', id);
-	var test = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSNtn3oG0TMMy4Manxu-y6tMzoDGp2JlNBTIzNmjnoadrl_VjaFlr_fw2DifD88W5EMo085lxVBdq7-/pub?gid=0&single=true&output=csv'
-	$.get(test)
+	$.get(url)
 	.then(csv_as_object)
-	.then(function(data){
+	.then(data => {
 		console.log(data);
 	});
 });
@@ -25,6 +24,8 @@ function csv_as_object(data){
 				}
 			}
 		}
+		console.log(obj)
+		console.log("returning");
 		resolve(obj);
 	});
 }
