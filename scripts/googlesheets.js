@@ -11,9 +11,12 @@ $(function() {
 });
 
 var csv_as_object = function(data_as_csv){
+	console.log(data_as_csv);
 	var obj = {};
 	var rows = data_as_csv.split("\n");
+	console.log(rows);
 	for (var r = 1; r < rows.length; r++){
+		console.log(rows[r]);
 		var type = rows[r].split(",", 1)[0];
 
 		if(rows[r].split(",").length > 2){
