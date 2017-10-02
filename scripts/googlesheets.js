@@ -10,10 +10,10 @@ $(function() {
 	});
 });
 
-var csv_as_object = function(data){
+var csv_as_object = function(data_as_csv){
 	return new Promise(function(resolve, reject){
 		var obj = {};
-		var rows = data.split("\n");
+		var rows = data_as_csv.split("\n");
 		for (r in rows){
 			var columns = rows[r].split(",");
 			var identifier = columns[0];
