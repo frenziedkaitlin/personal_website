@@ -11,6 +11,7 @@ $(function() {
 });
 
 var csv_as_object = function(data_as_csv){
+	console.log(data_as_csv);
 	var obj = {};
 	var rows = data_as_csv.split("\n");
 	for (var r = 1; r < rows.length; r++){
