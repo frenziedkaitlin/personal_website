@@ -25,7 +25,6 @@ var csv_as_object = function(data_as_csv){
 			}
 		}
 	}
-	console.log(obj)
-	console.log("returning2");
+	console.log("returning3");
 	return obj;
 }
