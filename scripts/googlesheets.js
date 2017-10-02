@@ -4,15 +4,13 @@ var id = '2PACX-1vSNtn3oG0TMMy4Manxu-y6tMzoDGp2JlNBTIzNmjnoadrl_VjaFlr_fw2DifD88
 $(function() {
 	url = url.replace('PUB_ID', id);
 	$.get(url)
-	.done(function(csv){
-		return csv_as_object(csv)
-	})
+	.then(csv_as_object)
 	.then(data => {
 		console.log(data);
 	});
 });
 
-function csv_as_object(data){
+var csv_as_object = function(data){
 	return new Promise(function(resolve, reject){
 		var obj = {};
 		var rows = data.split("\n");
