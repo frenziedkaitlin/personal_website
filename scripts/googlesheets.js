@@ -18,11 +18,12 @@ var csv_as_object = function(data_as_csv){
 		var type = rows[r].split(",", 1)[0];
 
 		if(rows[r].split(",").length > 2){
-			var text = rows[r].split(",", 2)[1];
+			var text = rows[r].split(",", 2);
 			console.log(type);
 			console.log(text);
+			text = text[1];
 
-			if(type[0] == "navigation menu"){
+			if(type == "navigation menu"){
 				obj[type = text;
 			} else if(type == "section"){
 				if(!obj[type) obj[type = [];
