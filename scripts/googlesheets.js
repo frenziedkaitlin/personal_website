@@ -4,9 +4,7 @@ var id = '2PACX-1vSNtn3oG0TMMy4Manxu-y6tMzoDGp2JlNBTIzNmjnoadrl_VjaFlr_fw2DifD88
 $(function() {
 	url = url.replace('PUB_ID', id);
 	$.get(url)
-	.then(function(csv) {
-		return csv_as_object(csv)
-	})
+	.then(csv_as_object)
 	.then(function(data) {
 		console.log(data);
 	});
@@ -25,6 +23,6 @@ var csv_as_object = function(data_as_csv){
 			}
 		}
 	}
-	console.log("returning3");
+	console.log("returning1");
 	return obj;
 }
