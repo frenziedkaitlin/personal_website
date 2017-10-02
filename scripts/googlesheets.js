@@ -13,21 +13,19 @@ $(function() {
 });
 
 var csv_as_object = function(data_as_csv){
-	return new Promise(function(resolve, reject){
-		var obj = {};
-		var rows = data_as_csv.split("\n");
-		for (r in rows){
-			var columns = rows[r].split(",");
-			var identifier = columns[0];
-			obj[identifier] = [];
-			if(columns.length > 1){
-				for(var i = 1; i < columns.length; i++){
-					obj[identifier].push(columns[i]);
-				}
+	var obj = {};
+	var rows = data_as_csv.split("\n");
+	for (r in rows){
+		var columns = rows[r].split(",");
+		var identifier = columns[0];
+		obj[identifier] = [];
+		if(columns.length > 1){
+			for(var i = 1; i < columns.length; i++){
+				obj[identifier].push(columns[i]);
 			}
 		}
-		console.log(obj)
-		console.log("returning2");
-		resolve(obj);
-	});
+	}
+	console.log(obj)
+	console.log("returning2");
+	return obj;
 }
