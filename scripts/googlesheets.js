@@ -26,7 +26,7 @@ var csv_as_object = function(data_as_csv){
 			if(type == "navigation menu"){
 				obj[type] = text;
 			} else if(type == "section"){
-				if(!obj[type]) obj[type = [];
+				if(!obj[type]) obj[type] = [];
 
 				obj[type].push(text);
 			} else {}
