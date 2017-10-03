@@ -15,6 +15,7 @@ body{
 }
 
 .block{
+    width: 70%;
     margin: -1em auto -4em auto;
     height: 100%;   
     padding: 2em 2em 2em 2em;
