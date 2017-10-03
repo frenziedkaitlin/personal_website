@@ -22,6 +22,7 @@ var csv_as_object = function(data_as_csv){
 			console.log(text);
 
 			if(type == "navigation menu"){
+				if(!obj[type]) obj[type] = "";
 				obj[type] = text;
 			} else if(type == "section"){
 				if(!obj[type]) obj[type] = [];
