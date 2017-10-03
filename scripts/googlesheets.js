@@ -33,6 +33,6 @@ var csv_as_object = function(data_as_csv){
 			obj[type].push(text);
 		} else {}
 	}
-	obj = json.parse(json.stringify(obj));
+	obj = JSON.parse(JSON.stringify(obj));
 	return obj;
 }
