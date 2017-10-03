@@ -15,21 +15,18 @@ var csv_as_object = function(data_as_csv){
 	var rows = data_as_csv.split("\n");
 
 	for (var r = 1; r < rows.length; r++){
-		var type = rows[r].split(",", 1)[0];
+		let type = rows[r].split(",", 1)[0];
+		let text = rows[r].replace(type+",", "");
+		console.log(text);
 
-		if(rows[r].split(",").length > 2){
-			var text = rows[r].replace(type+",", "");
-			console.log(text);
+		if(type == "navigation menu"){
+			if(!obj[type]) obj[type] = "";
+			obj[type] = text;
+		} else if(type == "section"){
+			if(!obj[type]) obj[type] = [];
 
-			if(type == "navigation menu"){
-				if(!obj[type]) obj[type] = "";
-				obj[type] = text;
-			} else if(type == "section"){
-				if(!obj[type]) obj[type] = [];
-
-				obj[type].push(text);
-			} else {}
-		}
+			obj[type].push(text);
+		} else {}
 	}
 	return obj;
 }
