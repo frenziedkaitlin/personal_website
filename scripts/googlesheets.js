@@ -21,7 +21,7 @@ var csv_as_object = function(data_as_csv){
 
 	for (var r = 1; r < rows.length; r++){
 		let type = rows[r].split(",", 1)[0];
-		let text = rows[r].replace(type+",", "");
+		let text = rows[r].replace(type+",", "").trim();
 		if(text[0] == "\""){
 			text = text.slice(1, text.length)
 		}
