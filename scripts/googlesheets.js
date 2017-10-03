@@ -9,7 +9,7 @@ $(function() {
 		console.log(data);
 		$('#topmenu').html(data['navigation menu']);
 		$('.block').each(function(index){
-			$(this).html(data['sections'][index])
+			$(this).html(data['section'][index])
 		});
 	});
 
