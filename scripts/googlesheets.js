@@ -6,7 +6,6 @@ $(function() {
 	$.get(url)
 	.then(csv_as_object)
 	.then(function(data) {
-		console.log(data);
 		$('#topmenu').html(data['navigation menu']);
 		$('.block').each(function(index){
 			$(this).html(data['section'][index])
