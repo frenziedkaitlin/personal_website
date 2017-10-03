@@ -22,7 +22,12 @@ var csv_as_object = function(data_as_csv){
 	for (var r = 1; r < rows.length; r++){
 		let type = rows[r].split(",", 1)[0];
 		let text = rows[r].replace(type+",", "");
-// 		text = text.slice(1, text.length-2);
+		if(text[0] == "\""){
+			text = text.slice(1, text.length)
+		}
+		if(text[text.length-1] == "\""){
+			text = text.slice(0, text.length-2);
+		}
 
 		if(type == "navigation menu"){
 			if(!obj[type]) obj[type] = "";
