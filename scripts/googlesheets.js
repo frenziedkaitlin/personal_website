@@ -1,5 +1,5 @@
 var url ='https://docs.google.com/spreadsheets/d/e/PUB_ID/pub?gid=0&single=true&output=csv';
-var id = '2PACX-1vSNtn3oG0TMMy4Manxu-y6tMzoDGp2JlNBTIzNmjnoadrl_VjaFlr_fw2DifD88W5EMo085lxVBdq7-';
+var id = 'YOUR_ID_HERE';
 
 $(function() {
 	url = url.replace('PUB_ID', id);
@@ -33,6 +33,5 @@ var csv_as_object = function(data_as_csv){
 			obj[type].push(text);
 		} else {}
 	}
-	//obj = JSON.parse(JSON.stringify(obj));
 	return obj;
 }
