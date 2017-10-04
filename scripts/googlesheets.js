@@ -7,7 +7,7 @@ $(function() {
 	.then(csv_as_object)
 	.then(function(data) {
 		console.log(data);
-		$('#topmenu').html(data['navigation menu']);
+		$('nav').html(data['navigation menu']);
 		$('.block').each(function(index){
 			var html = "<div class='block-middle'><div class='block-inner'>" + data['section'][index] + "</div></div>";
 			$(this).html(html)
