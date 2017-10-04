@@ -9,7 +9,8 @@ $(function() {
 		console.log(data);
 		$('#topmenu').html(data['navigation menu']);
 		$('.block').each(function(index){
-			$(this).html(data['section'][index])
+			var html = "<div class='block-middle'><div class='block-inner'>" + data['section'][index] + "</div></div>";
+			$(this).html(html)
 		});
 	});
 
