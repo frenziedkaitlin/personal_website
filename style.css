@@ -6,19 +6,11 @@ body{
     overflow-x: hidden;
 }
 
-@media screen and (max-width: 900px) {
-    body{font-size: 46.875%;}
-}
-
-@media screen and (max-width: 550px) {
-    body{font-size: 31.25%;}
-}
-
 .block{
     margin: -1em auto -4em auto;
     height: 100%;   
-    padding: 2em 3em 2em 3em;
-    font-size: 7em;
+    padding: 1.5em 25% 2.5em 25%;
+    font-size: 8em;
     text-align: center;
 }
 
@@ -42,11 +34,11 @@ p{
     text-align: center;
     width: 100%;
     margin: 0 -1em 0 -1em;
-    padding: 0.4em 1em 0.25em 1em;
+    padding: 0.5em 1em 0.5em 1em;
 }
 
-#topmenu img{
-    padding: 0.2em 0 0.2em 0;
+.menu img{
+    padding: 0.1em 0.1em 0 0.1em;
 }
 
 .menu a{
@@ -60,7 +52,7 @@ p{
 
 #external{
     position: fixed;
-    right: 0.5rem;
+    right: 0.2em;
 }
 
 #now{
@@ -69,6 +61,11 @@ p{
 
 #featured{
     background-color: #736B6B;
+}
+
+#featured-title{
+    display: block;
+    font-style: italic;
 }
 
 #contact{
@@ -84,3 +81,13 @@ p{
     display: block;
 }
 
+@media screen and (max-width: 900px) {
+    body{font-size: 46.875%;}
+}
+
+@media screen and (max-width: 550px) {
+    body{font-size: 31.25%;}
+    .block{
+        padding: 1.5em 10% 2.5em 10%;
+    }
+}
