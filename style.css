@@ -14,11 +14,6 @@ body{
     text-align: center;
 }
 
-#home{
-    margin: 0 auto -4em auto;
-    background-color: #D93434;
-}
- 
 a{
     color:white;
 }
@@ -45,14 +40,13 @@ p{
     text-decoration: none;
 }
 
-#hl{
-    position: fixed;
-    left: 0.5em;
-}
-
-#external{
+#social-small{
     position: fixed;
     right: 0.2em;
+}
+
+#home{
+    background-color: #D93434;
 }
 
 #now{
@@ -69,16 +63,7 @@ p{
 }
 
 #contact{
-    padding: 0;
     background-color: #D93434;
-}
-
-#contact a{
-    text-decoration: none;
-}
-
-#social{
-    display: block;
 }
 
 @media screen and (max-width: 900px) {
