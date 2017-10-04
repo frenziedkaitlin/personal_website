@@ -7,12 +7,24 @@ body{
 }
 
 .block{
-    margin: -1em auto -4em auto;
-    height: 100%;   
-    padding: 1.5em 25% 2.5em 25%;
     font-size: 8em;
     text-align: center;
+    display: table; 
+    height: 100%; 
+    width: 100%
 }
+
+.block-middle{
+    display: table-cell; 
+    vertical-align: middle
+}
+
+.block-inner{
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 50%; 
+}
+
 
 a{
     color:white;
@@ -29,7 +41,7 @@ p{
     text-align: center;
     width: 100%;
     margin: 0 -1em 0 -1em;
-    padding: 0.5em 1em 0.5em 1em;
+    padding: 5em 1em 0.5em 1em;
 }
 
 .menu img{
@@ -64,6 +76,11 @@ p{
 
 #contact{
     background-color: #D93434;
+}
+
+#social-large img{
+    height: 100px;
+    padding: 2em;
 }
 
 @media screen and (max-width: 900px) {
